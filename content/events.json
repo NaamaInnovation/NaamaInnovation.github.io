@@ -1,0 +1,35 @@
+{
+  "events": [
+    {
+      "title": "Circle of Emotions",
+      "date": "7.11.2026",
+      "type": "upcoming",
+      "location": "kulturlinie Bochum",
+      "detailsLink": "/works/#circle-of-emotions",
+      "published": true
+    },
+    {
+      "title": "Circle of Emotions",
+      "date": "10.11.2026",
+      "type": "upcoming",
+      "location": "Wohnzimmer Berlin",
+      "detailsLink": "/works/#circle-of-emotions",
+      "published": true
+    },
+    {
+      "title": "Machina Craft",
+      "date": "9.5.2026",
+      "type": "upcoming",
+      "location": "Arts and business campus drumcondra - Dublin",
+      "detailsLink": "/works/#machina-craft",
+      "published": true
+    },
+    {
+      "title": "The Clown March",
+      "date": "10.5.2024",
+      "type": "upcoming",
+      "location": "Shalom park Cork",
+      "published": true
+    }
+  ]
+}

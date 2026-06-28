@@ -1,0 +1,67 @@
+backend:
+  name: github
+  repo: NaamaInnovation/NaamaInnovation.github.io
+  branch: main
+
+media_folder: "photos/uploads"
+public_folder: "/photos/uploads"
+
+collections:
+  - name: "site_content"
+    label: "Site Content"
+    files:
+      - name: "works"
+        label: "Works"
+        file: "content/works.json"
+        format: "json"
+        fields:
+          - label: "Works"
+            name: "works"
+            widget: "list"
+            summary: "{{fields.title}} - {{fields.year}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Section ID", name: "id", widget: "string", required: false }
+              - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
+              - { label: "Description", name: "description", widget: "text", required: false }
+              - { label: "Year", name: "year", widget: "string", required: false }
+              - { label: "Sort Order", name: "sortOrder", widget: "number", required: false, value_type: "int" }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "YouTube / Video Link", name: "video", widget: "string", required: false }
+              - label: "Credits"
+                name: "credits"
+                widget: "object"
+                required: false
+                fields:
+                  - { label: "Composition", name: "Composition", widget: "string", required: false }
+                  - { label: "Performers", name: "Performers", widget: "string", required: false }
+                  - { label: "Sound engineer", name: "Sound engineer", widget: "string", required: false }
+                  - { label: "Electronics and sound design", name: "Electronics and sound design", widget: "string", required: false }
+                  - { label: "Collaborators", name: "Collaborators", widget: "string", required: false }
+                  - { label: "Premiere", name: "Premiere", widget: "string", required: false }
+              - { label: "Published", name: "published", widget: "boolean", default: true }
+
+      - name: "events"
+        label: "Events"
+        file: "content/events.json"
+        format: "json"
+        fields:
+          - label: "Events"
+            name: "events"
+            widget: "list"
+            summary: "{{fields.date}} - {{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Date", name: "date", widget: "string" }
+              - label: "Type"
+                name: "type"
+                widget: "select"
+                options:
+                  - { label: "Upcoming", value: "upcoming" }
+                  - { label: "Past", value: "past" }
+              - { label: "Venue / Festival", name: "venue", widget: "string", required: false }
+              - { label: "Location", name: "location", widget: "string", required: false }
+              - { label: "Description", name: "description", widget: "text", required: false }
+              - { label: "External Link", name: "link", widget: "string", required: false }
+              - { label: "Details Page Link", name: "detailsLink", widget: "string", required: false }
+              - { label: "Published", name: "published", widget: "boolean", default: true }

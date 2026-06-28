@@ -1,0 +1,50 @@
+{
+  "works": [
+    {
+      "id": "circle-of-emotions",
+      "title": "Circle of Emotions",
+      "subtitle": "A multidisciplinary journey into the human inner side, combining live music, surround electronics, video art, visual art, and audience participation.",
+      "description": "The performance is site specific and can be tailored for the venue",
+      "sortOrder": 999,
+      "video": "https://youtu.be/sOffarpxz-Y?si=z1F84M_Ye3jMu27M",
+      "credits": {
+        "Composition": "Naama Lavee / Jason Butler",
+        "Performers": "Naama Lavee / Jason Butler / Andy Ingamells",
+        "Electronics and sound design": "Andrew Walsh",
+        "Collaborators": "Video art - Alana Moloney",
+        "Premiere": "Cork Ireland June 2025"
+      },
+      "published": true
+    },
+    {
+      "id": "machina-craft",
+      "title": "Machina Craft",
+      "subtitle": "An installation of live electronic improvisation within a workshop for instrument repair.",
+      "description": "Sonata in iii movements for Electronics, Craftsman and his Tools",
+      "sortOrder": 998,
+      "video": "https://youtu.be/KzzpW-ZofgU?si=-s-k0KHgYJBt6iLl",
+      "credits": {
+        "Composition": "Naama Lavee",
+        "Performers": "Naama Lavee / David Grant",
+        "Sound engineer": "Andrew Walsh",
+        "Premiere": "Dublin Ireland May 2026"
+      },
+      "published": true
+    },
+    {
+      "id": "marionette",
+      "title": "Marionette",
+      "subtitle": "A theatrical-circus-musical performance",
+      "description": "A Marionette who escapes her home in search of her name and her humanity",
+      "sortOrder": 997,
+      "video": "https://youtu.be/xQSFbspSqgA?si=XA_n3uNZ0Y3JGbLp",
+      "credits": {
+        "Composition": "Naama Lavee",
+        "Performers": "Roni Kalev / Shifra Milshtein",
+        "Collaborators": "Text and theatrical direction - Dalit Milshtein\nCostumes - Michal Laor / Light design - Judy Kupferman",
+        "Premiere": "1.1.2026"
+      },
+      "published": true
+    }
+  ]
+}

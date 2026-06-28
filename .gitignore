@@ -1,0 +1,10 @@
+desktop.ini
+*.gdoc
+*.gsheet
+*.cr2
+*.CR2
+*.heic
+*.HEIC
+__pycache__/
+*.pyc
+cravelo-demo/
