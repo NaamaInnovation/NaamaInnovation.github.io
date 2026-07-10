@@ -59,6 +59,14 @@ function youtubeEmbedUrl(url) {
   return "";
 }
 
+function projectVideos(work) {
+  if (Array.isArray(work.videos)) {
+    return work.videos.map(youtubeEmbedUrl).filter(Boolean);
+  }
+
+  return [youtubeEmbedUrl(work.video)].filter(Boolean);
+}
+
 async function renderWorks() {
   const mount = document.querySelector("[data-works]");
   if (!mount) return;
@@ -73,19 +81,19 @@ async function renderWorks() {
     }
 
     mount.innerHTML = works.map((work) => {
-      const videoUrl = youtubeEmbedUrl(work.video);
+      const videos = projectVideos(work);
 
       return `
         <article class="work-card ${work.image ? "" : "work-card-no-image"}" id="${text(work.id || slug(work.title))}">
           ${work.image ? `<div class="work-visual"><img src="${text(work.image)}" alt="${text(work.title)}"></div>` : ""}
-          <div class="work-body ${videoUrl ? "work-body-with-video" : ""}">
+          <div class="work-body ${videos.length ? "work-body-with-video" : ""}">
             <div class="work-copy">
               <h2 class="work-title">${text(work.title)}</h2>
               <p class="work-subtitle">${text(work.subtitle)}</p>
               <p class="work-description">${text(work.description)}</p>
               ${renderCredits(work.credits)}
             </div>
-            ${videoUrl ? `<div class="video-embed"><iframe src="${videoUrl}" title="${text(work.title)} video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>` : ""}
+            ${videos.length ? `<div class="video-embed video-count-${videos.length}">${videos.map((videoUrl, index) => `<iframe src="${videoUrl}" title="${text(work.title)} video ${index + 1}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`).join("")}</div>` : ""}
           </div>
         </article>
       `;
@@ -96,15 +104,19 @@ async function renderWorks() {
 }
 
 function renderEventCard(event) {
+  const projectTitle = event.projectLink
+    ? `<a href="${text(event.projectLink)}">${text(event.title)}</a>`
+    : text(event.title);
+
   return `
     <article class="event-card">
       <p class="event-date">${text(event.date)}</p>
       <div class="event-main">
-        <h2 class="event-title">${text(event.title)}</h2>
+        <h2 class="event-title">${projectTitle}</h2>
         ${event.venue || event.location ? `<p class="event-meta">${event.link ? `<a href="${text(event.link)}" target="_blank" rel="noreferrer">${text(event.venue)}</a>` : text(event.venue)}${event.location ? `<br>${text(event.location)}` : ""}</p>` : ""}
         ${event.description ? `<p class="event-description">${text(event.description)}</p>` : ""}
       </div>
-      ${event.detailsLink ? `<a class="event-link" href="${text(event.detailsLink)}">Details -></a>` : ""}
+      ${event.detailsLink ? `<a class="event-link" href="${text(event.detailsLink)}" target="_blank" rel="noreferrer">Details -></a>` : '<span class="event-link-placeholder" aria-hidden="true"></span>'}
     </article>
   `;
 }

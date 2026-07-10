@@ -136,13 +136,19 @@ def build_projects():
             "Premiere": excel_date(get_cell(row, headers, "Premiere")),
         }
 
+        videos = [
+            get_cell(row, headers, "Youtube link 1", "YouTube link 1", "Youtube link", "YouTube link", "Video"),
+            get_cell(row, headers, "Youtube link 2", "YouTube link 2"),
+        ]
+        videos = [video for video in videos if video]
+
         project = {
             "id": slug(title),
             "title": title,
             "subtitle": get_cell(row, headers, "sub-title", "Subtitle"),
             "description": get_cell(row, headers, "Third title", "Description"),
             "sortOrder": len(rows) - index,
-            "video": get_cell(row, headers, "Youtube link", "YouTube link", "Video"),
+            "videos": videos,
             "credits": credits,
             "published": True,
         }
@@ -167,12 +173,14 @@ def build_events(projects):
         if not any([title, date, location]):
             continue
 
+        details_url = get_cell(row, headers, "Details", "Details link", "Link")
         event = {
             "title": title,
             "date": date,
             "type": "upcoming",
             "location": location,
-            "detailsLink": project_links.get(title.lower(), ""),
+            "projectLink": project_links.get(title.lower(), ""),
+            "detailsLink": details_url,
             "published": True,
         }
         events.append(remove_empty_values(event))

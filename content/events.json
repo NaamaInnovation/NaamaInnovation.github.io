@@ -5,7 +5,8 @@
       "date": "7.11.2026",
       "type": "upcoming",
       "location": "kulturlinie Bochum",
-      "detailsLink": "/works/#circle-of-emotions",
+      "projectLink": "/works/#circle-of-emotions",
+      "detailsLink": "https://kulturlinie.ruhr/",
       "published": true
     },
     {
@@ -13,7 +14,7 @@
       "date": "10.11.2026",
       "type": "upcoming",
       "location": "Wohnzimmer Berlin",
-      "detailsLink": "/works/#circle-of-emotions",
+      "projectLink": "/works/#circle-of-emotions",
       "published": true
     },
     {
@@ -21,7 +22,7 @@
       "date": "9.5.2026",
       "type": "upcoming",
       "location": "Arts and business campus drumcondra - Dublin",
-      "detailsLink": "/works/#machina-craft",
+      "projectLink": "/works/#machina-craft",
       "published": true
     },
     {

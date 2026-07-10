@@ -7,7 +7,7 @@ Static portfolio website for Naama Lavee, prepared for GitHub Pages at `https://
 - `/` - landing page
 - `/about/` - about page
 - `/works/` - projects page
-- `/events/` - future events page
+- `/events/` - events page
 - `/contact/` - contact page
 - `/gallery/` - gallery page
 - `/admin/` - Decap CMS admin interface
