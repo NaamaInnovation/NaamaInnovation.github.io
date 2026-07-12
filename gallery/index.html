@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/styles.css?v=20260628-9">
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20260628-11">
   </head>
   <body class="content-page gallery-page">
     <header class="site-brand" aria-label="Site title">
@@ -16,7 +16,13 @@
       <p class="brand-subtitle">Naama Lavee</p>
     </header>
 
-    <nav class="sidebar" aria-label="Main navigation">
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="sidebar" id="main-navigation" aria-label="Main navigation">
       <a href="/about/">About</a>
       <a href="/works/">Projects</a>
       <a href="/contact/">Contact</a>
@@ -74,6 +80,7 @@
       <button class="lightbox-close" type="button" data-lightbox-close aria-label="Close image">Close</button>
       <img src="" alt="" data-lightbox-image>
     </div>
-    <script src="/assets/js/gallery.js?v=20260628-5"></script>
+    <script src="/assets/js/gallery.js?v=20260628-11"></script>
+    <script src="/assets/js/menu.js?v=20260628-11"></script>
   </body>
 </html>
