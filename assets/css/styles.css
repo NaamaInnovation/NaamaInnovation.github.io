@@ -719,6 +719,19 @@ a {
     margin: 0;
   }
 
+  .projects-page .page-title,
+  .projects-page .page-subtitle,
+  .works-list,
+  .work-card,
+  .work-body,
+  .work-copy,
+  .credits,
+  .credits div,
+  .credits dd {
+    min-width: 0;
+    max-width: 100%;
+  }
+
   .about-grid,
   .work-card,
   .events-grid,
@@ -742,6 +755,19 @@ a {
 
   .work-body-with-video {
     grid-template-columns: 1fr;
+  }
+
+  .work-body {
+    padding: clamp(1.1rem, 5vw, 1.6rem) 0;
+  }
+
+  .work-title,
+  .work-subtitle,
+  .work-description,
+  .credits dt,
+  .credits dd {
+    overflow-wrap: anywhere;
+    white-space: normal;
   }
 
   .video-count-2 {
@@ -778,6 +804,10 @@ a {
   .credits div {
     grid-template-columns: 1fr;
     gap: 0.05rem;
+  }
+
+  .credits dd {
+    white-space: normal;
   }
 
   .contact-form button {
