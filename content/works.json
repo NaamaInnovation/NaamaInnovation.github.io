@@ -5,7 +5,7 @@
       "title": "Circle of Emotions",
       "subtitle": "A multidisciplinary journey into the human inner side, combining live music, surround electronics, video art, visual art, and audience participation.",
       "description": "The performance is site specific and can be tailored for the venue",
-      "sortOrder": 999,
+      "sortOrder": 1000,
       "videos": [
         "https://youtu.be/sOffarpxz-Y?si=z1F84M_Ye3jMu27M"
       ],
@@ -23,7 +23,7 @@
       "title": "Machina Craft",
       "subtitle": "An installation of live electronic improvisation within a workshop for instrument repair.",
       "description": "Sonata in iii movements for Electronics, Craftsman and his Tools",
-      "sortOrder": 998,
+      "sortOrder": 999,
       "videos": [
         "https://youtu.be/KzzpW-ZofgU?si=-s-k0KHgYJBt6iLl"
       ],
@@ -32,6 +32,23 @@
         "Performers": "Naama Lavee / David Grant",
         "Sound engineer": "Andrew Walsh",
         "Premiere": "Dublin Ireland May 2026"
+      },
+      "published": true
+    },
+    {
+      "id": "the-clown-march",
+      "title": "The Clown March",
+      "subtitle": "A musical piece in 5 acts for an Ensemble and actors.",
+      "description": "A performance that takes place in a public space, portraying a funeral ceremony from a clown's perspective.",
+      "sortOrder": 998,
+      "videos": [
+        "https://youtu.be/turYc8n5Omk?si=UTR6_MzI6yETA1lb"
+      ],
+      "credits": {
+        "Composition": "Naama Lavee",
+        "Performers": "Andy Ingamells, Deirdre Cadogan, Sidney Uzik, Stephan Keenan, Maxine Oneill, Lotta Vainionpaa",
+        "Collaborators": "Costume & Design: Aiofa King",
+        "Premiere": "1.5.2024"
       },
       "published": true
     },
