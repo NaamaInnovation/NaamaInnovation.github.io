@@ -32,6 +32,15 @@ function sortNewestFirst(items) {
   return [...items].sort((a, b) => Number(b.sortOrder || b.year || 0) - Number(a.sortOrder || a.year || 0));
 }
 
+function scrollToHashTarget() {
+  if (!window.location.hash) return;
+
+  const target = document.getElementById(window.location.hash.slice(1));
+  if (target) {
+    target.scrollIntoView({ block: "start" });
+  }
+}
+
 function slug(value) {
   return String(value || "")
     .toLowerCase()
@@ -98,6 +107,8 @@ async function renderWorks() {
         </article>
       `;
     }).join("");
+
+    scrollToHashTarget();
   } catch (error) {
     mount.innerHTML = '<p class="empty-state">Works could not be loaded.</p>';
   }

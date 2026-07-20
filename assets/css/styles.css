@@ -587,6 +587,71 @@ a {
   background: rgba(255, 252, 245, 0.74);
 }
 
+@media (min-width: 821px) {
+  :root {
+    --content-left: clamp(27rem, 32vw, 36rem);
+  }
+
+  .content-page .site-brand {
+    width: min(31vw, 28rem);
+    background: rgba(255, 255, 255, 0.88);
+    box-shadow: 0 0 0 0.85rem rgba(255, 255, 255, 0.88);
+  }
+
+  .content-page .page-shell {
+    padding-top: clamp(16rem, 24vh, 19rem);
+  }
+
+  .content-page .page-content {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .projects-page .page-content,
+  .events-page .page-content,
+  .gallery-page .page-content,
+  .about-page .page-content,
+  .contact-page .page-content {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .work-card,
+  .event-card,
+  .gallery-grid,
+  .about-grid,
+  .contact-form,
+  .contact-panel {
+    scroll-margin-top: clamp(16rem, 24vh, 19rem);
+  }
+}
+
+@media (min-width: 821px) and (max-width: 1199px) {
+  :root {
+    --content-left: clamp(18rem, 34vw, 25rem);
+  }
+
+  .brand-title {
+    font-size: clamp(2.4rem, 4.7vw, 4rem);
+  }
+
+  .brand-subtitle {
+    font-size: clamp(1.2rem, 2.4vw, 1.8rem);
+  }
+
+  .sidebar {
+    width: min(10.5rem, 24vw);
+  }
+
+  .content-page .page-shell {
+    padding-top: clamp(13rem, 22vh, 16rem);
+  }
+
+  .page-title {
+    font-size: clamp(3.2rem, 7vw, 5.8rem);
+  }
+}
+
 @media (max-width: 820px) {
   :root {
     --content-left: 1rem;
