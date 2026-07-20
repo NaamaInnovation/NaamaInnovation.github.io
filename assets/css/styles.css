@@ -628,7 +628,7 @@ a {
 
 @media (min-width: 821px) and (max-width: 1199px) {
   :root {
-    --content-left: clamp(18rem, 34vw, 25rem);
+    --content-left: clamp(22rem, 39vw, 30rem);
   }
 
   .brand-title {
@@ -648,7 +648,29 @@ a {
   }
 
   .page-title {
-    font-size: clamp(3.2rem, 7vw, 5.8rem);
+    font-size: clamp(3rem, 6vw, 5rem);
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1680px) {
+  :root {
+    --content-left: clamp(31rem, 36vw, 39rem);
+  }
+
+  .content-page .site-brand {
+    width: min(33vw, 31rem);
+  }
+
+  .page-title {
+    font-size: clamp(4.4rem, 7.2vw, 7rem);
+  }
+
+  .projects-page .page-content,
+  .events-page .page-content,
+  .gallery-page .page-content,
+  .about-page .page-content,
+  .contact-page .page-content {
+    width: min(100%, 62rem);
   }
 }
 
