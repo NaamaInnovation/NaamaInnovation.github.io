@@ -96,7 +96,7 @@ def get_cell(row, headers, *names):
     return ""
 
 
-def excel_date(value):
+def excel_date(value, month_year=False):
     if not re.fullmatch(r"\d+(\.0)?", value or ""):
         return value
 
@@ -105,6 +105,9 @@ def excel_date(value):
         return value
 
     date = datetime(1899, 12, 30) + timedelta(days=serial)
+    if month_year:
+        return date.strftime("%B %Y")
+
     return f"{date.day}.{date.month}.{date.year}"
 
 
@@ -133,7 +136,7 @@ def build_projects():
             "Sound engineer": get_cell(row, headers, "Sound engineer"),
             "Electronics and sound design": get_cell(row, headers, "Electronics and sound design"),
             "Collaborators": get_cell(row, headers, "Colloborators", "Collaborators"),
-            "Premiere": excel_date(get_cell(row, headers, "Premiere")),
+            "Premiere": excel_date(get_cell(row, headers, "Premiere"), month_year=True),
         }
 
         videos = [
